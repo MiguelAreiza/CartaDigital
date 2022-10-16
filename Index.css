@@ -20,6 +20,24 @@
     text-align: center;
     font-family: 'Kaushan Script', cursive;
 }
+.btnWp{
+    position: fixed;
+    z-index: 508;
+    top: 120px;
+    right: 3%;
+    width: 50px;
+    height: 50px;
+    background:  transparent;
+    background-image: url('Imagenes/whatsapp.png');
+    background-size: contain;
+    border: none;
+    border-radius: 50% 50% 50% 0;
+    transition: 1s;
+}
+.btnWp:hover{
+    transform: scale(1.4);
+    box-shadow: 3px -3px 8px #777;
+}
 .Botones{
     position: relative;
     width: 80%;
