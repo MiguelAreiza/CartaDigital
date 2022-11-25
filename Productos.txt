@@ -8,7 +8,7 @@
             "descripcion":"Burger de ternera, queso provolone, chimichurri, lechuga, tomate y cebolla roja en pan artesano"
         },
         {
-            "imagen":"Imagenes/Plato1.jpg",
+            "imagen":"Imagenes/Plato2.jpg",
             "titulo":"COSTILLAS BBQ",
             "precio":"45.200",
             "categoria":"Carnes - Parrill",
