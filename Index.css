@@ -1,127 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+}
 .Base{
     width: 100%;
     background: url('Imagenes/Background.jpg') center repeat-y;
-    background-size: 100%;
-                
+    background-size: 100%;                
 }
-.Barra{
+.NavBar{
+    box-sizing: border-box;
     width: 90%;
+    height: 12vh;
     background: #000;
     position: fixed;
     z-index: 100;
     left: 5%;
-    right: 5%;
-    border-radius: 0 0 20px 20px;
+    border-radius: 0 0 4vh 4vh;
     box-shadow: 0px 6px 20px #777;
+    display: flex;  
+}
+.NavBar > label{
     color: #fa0;
     text-shadow: 2px 2px 10px #777;
-    padding: 8px;
-    font-size: 40px;
+    font-size: 7vh;
     text-align: center;
     font-family: 'Kaushan Script', cursive;
+    margin: auto;
 }
-.btnWp{
+.Buttoms{
+    position: relative;
+    width: 80%;
+    left: 10%;
+    top: 17vh;
+    display: flex;
+}
+#btnSp, #btnEn{
+    font-family: 'Kaushan Script', cursive;
+    background-color: #000;
+    color: #fa0;
+    padding: 3vh 4vh;
+    border: none;
+    border-radius: 4vh;
+    box-shadow: 0px 0px 15px  #777;
+    text-shadow: 1px 1px 4px #777;
+    font-size: 2.5vh;
+    font-weight: bold;  
+    margin: auto;
+    transition: .5s;
+}
+#btnSp{
+    display: none;
+}
+#btnSp:hover, #btnEn:hover{
+    transform: scale(1.1);    
+    border-radius: 2vh;
+}
+#Products{
+    box-sizing: border-box;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25vh;
+}
+.CardProducts{
+    box-sizing: border-box;
+    width: 450px;
+    margin: auto;
+    margin-bottom: 6vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+.ProductsImg{
+    position: relative;
+    z-index: 50;
+    width: 100%;
+    border-radius: 5vh 5vh 0 0;
+}
+.Details{
+    box-sizing: border-box;
+    position: relative;
+    z-index: 20;
+    background: #000;
+    width: 100%;
+    height: 55px;
+    border-radius: 0 0 5vh 5vh;
+    box-shadow: 0px 5px 15px #fa0;
+    contain: content;
+    transition: 1s;
+}
+.Details > .Title{
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0 15px 0;
+    font-size: 18px;    
+    font-family: Arial, Helvetica, sans-serif;
+}
+.fa.fa-plus.link-icon, .fa.fa-minus.link-icon{
+    background:  #222;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    font-size: 18px;
+    padding: 1px;
+    margin-left: 20px;
+    border: 1px solid #fa0;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px #777;
+}
+.Price > b, .Category > b, .Description > b{    
+    display: block;
+    padding: 0 30px 0 30px;
+    font-size: medium;
+    color: #fa0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.Price > p, .Category > p, .Description > p{
+    color: #fff;
+    margin: 5px 0 10px 0;
+    padding: 0 30px 0 30px;
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.Description > p{
+    overflow-y: scroll;
+    width: 90%;
+    height: 80px;
+    text-align: justify;
+}
+.FloatButtoms{
+    box-sizing: border-box;
     position: fixed;
-    z-index: 508;
-    top: 120px;
-    right: 3%;
+    z-index: 200;
+    top: 17vh;
+    right: 2vw;
+}
+#btnWp{
     width: 50px;
     height: 50px;
     background:  transparent;
     background-image: url('Imagenes/whatsapp.png');
-    background-size: contain;
+    background-size: 100% 100%;
     border: none;
     border-radius: 50% 50% 50% 0;
     transition: 1s;
 }
-.btnWp:hover{
-    transform: scale(1.4);
-    box-shadow: 3px -3px 8px #777;
-}
-.Botones{
-    position: relative;
-    width: 80%;
-    margin: auto;
-    top: 110px;
-    display: flex;
-    flex-wrap: wrap;
-}
-.Contenido{
-    width: 80%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 160px;
-}
-.btnIdioma{
-    width: 140px;
-    font-family: 'Kaushan Script', cursive;
-    background-color: #000;
-    color: #fa0;
-    padding: 15px;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0px 0px 15px  #777;
-    text-shadow: 1px 1px 4px #777;
-    font-size: large;
-    font-weight: bold;  
-    transition: .5s;margin: auto;    
-}
-.btnIdioma:hover{
-    transform: scale(1.1);
-}
-.col-md-6{
-    box-sizing: border-box;
-    padding: 0 2% 13% 2%;
-    margin: auto;
-}
-.Contenido_img{
-    width: 100%;
-    border-radius: 30px 30px 0 0;
-}
-.Detalles{
-    background: #000;
-    color: #fff;
-    width: 100.1%;
-    height: 55px;
-    border-radius: 0 0 30px 30px;
-    contain: content;
-    box-shadow: 0px 5px 15px #fa0;
-    transition: 1s;
-}
-.Detalles:hover{
-    height: 260px;
-    translate: 0 -205px ;
-    margin-bottom: -205px;
-    opacity: 0.8;
-    box-shadow: 0px 15px 15px -5px #fa0;
-}
-.Titulo{
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    padding: 15px 0 15px 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.fa.fa-plus.link-icon{
-    background:  #222;
-    color: #fff;
-    width: 18px;
-    height: 18px;
-    padding: 1px;
-    border-radius: 10px;
-    margin: auto;
-    box-shadow: 0px 0px 5px #777;
-}
-.Titulo2{
-    display: block;
-    padding: 0 30px 0 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #fa0;
-}
-p{
-    margin: 0 0 5px 0;
-    padding: 0 30px 0 30px;
-    font-size: small;
-    font-family: Arial, Helvetica, sans-serif;
+#btnWp:hover{
+    transform: scale(1.2);
 }
